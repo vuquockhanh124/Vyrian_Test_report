@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <div>
+        <label for="PartNumber">Part Number? </label>
+        <input type="text" id="PartNumber" value="">
+
+        <label for="Quantity">Quantity? </label>
+        <input type="text" id="Quantity" value="">
+    </div>
+
+    <h1>Package type? </h1>
+    <div>
+       
+        <input type="radio" name="package_type" id="tray" value="a tray">
+        <label for="tray">Tray</label>
+        <input type="radio" name="package_type" id="trays" value="trays">
+        <label for="trays">Trays</label>
+    </div>
+
+    <div>
+        <input type="radio" name="package_type" id="cut_tape" value="cut tape">
+        <label for="cut_tape">Cut tape</label>
+        <input type="radio" name="package_type" id="reel" value="a reel">
+        <label for="reel">Reel</label>
+        <input type="radio" name="package_type" id="reels" value="reels">
+        <label for="reels">Reels</label>
+        <br>
+        <input type="radio" name="package_type" id="bulk" value="bulk">
+        <label for="bulk">Bulk</label>
+        <input type="radio" name="package_type" id="bulks" value="bulks">
+        <label for="bulks">Bulks</label>
+    </div>
+
+    <div class="test_type">
+
+        <h1>What is the kind of the test? </h1>
+        <input type="radio" name="test" id="AS6081" value="AS6081">
+        <label for="AS6081">AS6081</label>
+
+        <input type="radio" name="test" id="Regular" value="Regular">
+        <label for="Regular">Regular</label>
+    </div>
+
+    <div>
+        <h1>What test did you do? </h1>
+        <input type="checkbox" name="test_name"  id="Chemical" value="Chemical">
+        <label for="Chemical">Chemical Test</label>
+
+        <input type="checkbox" name="test_name"  id="Dimension" value="Dimension">
+        <label for="Dimension">Dimension</label>
+
+        <input type="checkbox" name="test_name" id="Terminal" value="Terminal">
+        <label for="Terminal">Terminal</label>
+
+        <input type="checkbox" name="test_name"  id="Soldering" value="Soldering">
+        <label for="Soldering">Soldering </label>
+
+
+
+
+
+
+    </div> 
+
+    <h1>Any problem?</h1>
+
+    <div>
+        <input type="radio" name="yes_no" id="yes" value="1">
+        <label for="yes">Yes</label>
+
+        <input type="radio" name="yes_no" id="no" value="0">
+        <label for="no">No</label>
+
+        <h2>What is the problem?</h2>
+
+        <input type="checkbox" name="problem" id="scratches" value="1">
+        <label for="scratches">Scratches</label>
+
+        <input type="checkbox" name="problem" id="testmark" value="2">
+        <label for="testmark">Test Mark</label>
+
+        <input type="checkbox" name="problem" id="NoPod" value="NoPod">
+        <label for="NoPod">No POD</label>
+    </div>
+
+        <button id="btn">Submit</button>
+        <button id="btn_clear">Clear Text</button>
+    
+
+    <div >
+        <p id="text_output"> </p>
+        
+    </div>
+    
+<script src="script.js"></script>
+</body>
+</html>
