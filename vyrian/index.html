@@ -12,12 +12,27 @@
 
 
 <body>
-    <div>
-        <label for="PartNumber">Part Number? </label>
-        <input type="text" id="PartNumber" value="">
+<div class="left_container">
+    <div >
+         
+       
+        <label for="PartNumber">Part Number </label>
+        <input class="textBox" type="text" id="PartNumber" value="">
+   
+            
+        <label for="Quantity">Quantity </label>
+        <input class="textBox textBox3" type="text" id="Quantity" value="">
+         
+        
+    </div>
 
-        <label for="Quantity">Quantity? </label>
-        <input type="text" id="Quantity" value="">
+    <div>
+       
+        <label for="DC">Date Code </label>
+        <input class="textBox textBox2" type="text" id="DC" value="">
+
+        <label for="LotCode">Lot Code </label>
+        <input class="textBox " type="text" id="LotCode" value="">
     </div>
 
     <h1>Package type? </h1>
@@ -67,6 +82,18 @@
         <input type="checkbox" name="test_name"  id="Soldering" value="Soldering">
         <label for="Soldering">Soldering </label>
 
+        <input type="checkbox" name="test_name"  id="Xray" value="Xray">
+        <label for="Xray">Xray </label>
+
+        <input type="checkbox" name="test_name"  id="XRF" value="XRF">
+        <label for="XRF">XRF </label>
+
+        <input type="checkbox" name="test_name"  id="Decap" value="Decap">
+        <label for="Decap">Decapsulation </label>
+
+        <input type="checkbox" onchange="check_status()"   id="All" value="SelectAll">
+        <label for="All">Select all above </label
+         
 
 
 
@@ -74,16 +101,16 @@
 
     </div> 
 
-    <h1>Any problem?</h1>
+    <!-- <h1>Any problem?</h1> -->
 
     <div>
-        <input type="radio" name="yes_no" id="yes" value="1">
+        <!-- <input type="radio" name="yes_no" id="yes" value="1">
         <label for="yes">Yes</label>
 
         <input type="radio" name="yes_no" id="no" value="0">
-        <label for="no">No</label>
+        <label for="no">No</label> -->
 
-        <h2>What is the problem?</h2>
+        <h2>Any Problem?</h2>
 
         <input type="checkbox" name="problem" id="scratches" value="1">
         <label for="scratches">Scratches</label>
@@ -103,7 +130,25 @@
         <p id="text_output"> </p>
         
     </div>
-    
+</div>
+
+
+<div id="right_container">
+
+    <div >
+        <label  for="NumDecap">How many pcs for Decap? </label>
+        <input  type="text" id="NumDecap" value="">
+    </div>
+
+    <div >
+        <label   for="Logo">What logo was observed? </label>
+        <input   type="text" id="Logo" value="">
+
+        <label for="Marking">What marking was observed? </label>
+        <input type="text" id="Marking" value="">
+    </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>

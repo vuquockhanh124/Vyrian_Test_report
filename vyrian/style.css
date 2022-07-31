@@ -1,7 +1,42 @@
 #text_output{
-    width: 400px;
+    width: 700px;
     height:400px;
     background-color: aqua;
 
 
 }
+
+
+ 
+.textBox{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right:10px;
+    width: 33;
+    height: 200;
+    align-self: center;
+}
+.textBox2{
+    margin-left:24px;
+}
+.textBox3{
+    margin-left: 14px; 
+}
+
+
+ 
+
+
+
+#NumDecap{
+    visibility: hidden;
+}
+
+
+#Decap:checked ~ #NumDecap{
+    visibility: visible;
+}
+
+
+ 
+ 
