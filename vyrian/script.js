@@ -46,13 +46,13 @@ function terminalCheck(x) {
   } else if (x == 3) {
     return "Terminal Inspection: Terminals are free of corrosion and oxidation. Minor test contact marks were observed. Minor scratches were observed.";
   } else if (x == 4) {
-    return "Terminal Inspection: Terminals are free of deformations. Minor oxidation were observed on the terminals.";
+    return "Terminal Inspection: Terminals are free of deformations. Minor oxidation was observed on the terminals.";
   } else if (x == 5) {
-    return "Terminal Inspection: Minor scratches were observed. Minor oxidation were observed on the terminals.";
+    return "Terminal Inspection: Minor scratches were observed. Minor oxidation was observed on the terminals.";
   } else if (x == 6) {
     return "Terminal Inspection: Minor test contact marks were observed. Minor oxidation were observed on the terminals.";
   } else if (x == 7) {
-    return "Terminal Inspection: Minor scratches were observed. Minor test contact marks were observed. Minor oxidation were observed on the terminals.";
+    return "Terminal Inspection: Minor scratches were observed. Minor test contact marks were observed. Minor oxidation was observed on the terminals.";
   }
 }
 
@@ -271,9 +271,9 @@ function decap_summary(size) {
       (x + 1) +
       ': Manufacturer logo "' +
       logo +
-      '" were observed. "' +
+      '" was observed. "' +
       marking +
-      '" were observed- this could be the original device code.' +
+      '" was observed- this could be the original device code.' +
       "<br>" +
       "<br>";
     document.getElementById("text_area").value +=
@@ -283,9 +283,9 @@ function decap_summary(size) {
       (x + 1) +
       ': Manufacturer logo "' +
       logo +
-      '" were observed. "' +
+      '" was observed. "' +
       marking +
-      '" were observed- this could be the original device code.' +
+      '" was observed- this could be the original device code.' +
       "\r\n" +
       "\r\n";
   }
