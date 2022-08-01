@@ -26,17 +26,19 @@
 
  
 
-
-
-#NumDecap{
-    visibility: hidden;
+.left_container{
+    display: inline-block; 
+    position: relative;
+    width:800px;
+    height:1000;
 }
 
-
-#Decap:checked ~ #NumDecap{
-    visibility: visible;
+.right_container{
+    display: inline-block; 
+    position: absolute;
+    width: 700px;
+    height: 1000;
 }
-
 
  
  
