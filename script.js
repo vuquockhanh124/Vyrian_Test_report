@@ -21,6 +21,8 @@ const decap = document.querySelector("#Decap");
 const btn = document.querySelector("#btn");
 const btn_clear = document.querySelector("#btn_clear");
 const text_output = document.querySelector("#text_output");
+
+
 let text_area = document.getElementById("text_area").value;
 
 let text = "";
@@ -71,7 +73,7 @@ btn.onclick = () => {
   let package_type = document.querySelector(
     'input[name="package_type"]:checked'
   ).value;
-  let test_type = document.querySelector('input[name="test"]:checked').value;
+  
   let partNumber = document.getElementById("PartNumber").value;
   let Quantity = document.getElementById("Quantity").value;
 
@@ -84,6 +86,14 @@ btn.onclick = () => {
   let sample = checkSample(Quantity);
 
   let xray_sample = checkXray(Quantity);
+
+  let inorpar= document.querySelector('input[name="Intact_Or_Partial"]:checked').value;
+
+  let passive=document.querySelector('input[name="electrical"]:checked');
+
+  let passive_value=document.getElementById("passive_value").value;
+
+  let tolerance=document.getElementById("tolerence").value;
 
   text += "Classification: Unused" + "<br>" + "<br>";
 
@@ -134,13 +144,29 @@ btn.onclick = () => {
 
   console.log("t is "+t)
   text += terminalCheck(t) + "<br>" + "<br>";
-  document.getElementById("text_area").value +=
-    terminalCheck(t) + "\r\n" + "\r\n";
+  document.getElementById("text_area").value +=terminalCheck(t) + "\r\n" + "\r\n";
 
   //chemical test
   if (chemical.checked) {
     text += chem + "<br>" + "<br>";
     document.getElementById("text_area").value += chem + "\r\n" + "\r\n";
+  }
+
+  if(passive!=null){
+    if (passive.value=="Capacitance"){
+      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+ "<br>" + "<br>";
+      document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+"\r\n" + "\r\n";
+    }
+
+    else if (passive.value=="Resistance"){
+      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+ "<br>" + "<br>";
+      document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+"\r\n" + "\r\n";
+    }
+
+    else if (passive.value=="Inductance"){
+      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +" tolerance"+ "<br>" + "<br>";
+      document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +" tolerance"+"\r\n" + "\r\n";
+    }
   }
 
   //Xray test
@@ -188,9 +214,13 @@ btn.onclick = () => {
       "\r\n";
   }
   // Note
-  text += final + "<br>" + "<br>" + "<br>" + "<br>";
+  text += final + "<br>" + "<br>";
   document.getElementById("text_area").value +=
-    final + "\r\n" + "\r\n" + "\r\n" + "\r\n";
+    final + "\r\n" + "\r\n";
+
+  text +="Package: "+inorpar+ "<br>" + "<br>" + "<br>" + "<br>"; 
+  document.getElementById("text_area").value +="Package: "+inorpar+ "\r\n" + "\r\n" + "\r\n" + "\r\n"
+
 
   if (decap.checked) {
     text += "Decapsulation Summary:" + "<br>" + "<br>";

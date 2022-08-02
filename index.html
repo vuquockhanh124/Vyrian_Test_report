@@ -53,16 +53,13 @@
         <label for="bulk">Bulk</label>
         <input type="radio" name="package_type" id="bulks" value="bulks" />
         <label for="bulks">Bulks</label>
+        <br>
+        <input type="radio" name="package_type" id="tube" value="tube" />
+        <label for="tube">Tube</label>
+        <input type="radio" name="package_type" id="tubes" value="tubes" />
+        <label for="tubes">Tubes</label>
       </div>
 
-      <div class="test_type">
-        <h1>What is the kind of the test?</h1>
-        <input type="radio" name="test" id="AS6081" value="AS6081" />
-        <label for="AS6081">AS6081</label>
-
-        <input type="radio" name="test" id="Regular" value="Regular" />
-        <label for="Regular">Regular</label>
-      </div>
 
       <div>
         <h1>What test did you do?</h1>
@@ -123,6 +120,32 @@
                  <input type="radio" name="yes_no" id="no" value="0">
                   <label for="no">No</label> -->
 
+          <!-- Electrical  -->
+        <div>
+          <h1>Electrical? </h1>
+          
+          <div> 
+            <input type="radio" name="electrical" id="capacitor" value="Capacitance">
+            <label for="capacitor">Capacitor</label>
+  
+            <input type="radio" name="electrical" id="resistor" value="Resistance">
+            <label for="resistor">Resistor</label>
+  
+            <input type="radio" name="electrical" id="inductor" value="Inductance">
+            <label for="inductor">Capacitor</label>
+          </div>
+
+          <div style="margin-top:15px; margin-left:10px">
+            <input type="text" placeholder="Value for Passive" id="passive_value" value="">
+            <input type="text" placeholder="Tolerence" id="tolerence" value="">
+          </div>
+
+         
+
+
+
+
+        </div>
         <h2>Any Problem?</h2>
 
         <input type="checkbox" name="problem" id="scratches" value="1" />
@@ -136,6 +159,14 @@
 
         <input type="checkbox" name="problem" id="NoPod" value="NoPod" />
         <label for="NoPod">No POD</label>
+      </div>
+
+      <div class="package_type">
+        <h2>Package type? </h2>
+        <input type="radio" name="Intact_Or_Partial" id="Intact" value="Intact">
+        <label for="Intact">Intact</label>
+        <input type="radio" name="Intact_Or_Partial" id="Partial" value="Partial">
+        <label for="Partial">Partial</label>
       </div>
 
       <button id="btn">Submit</button>
@@ -155,7 +186,11 @@
         <label for="Marking">What marking was observed? </label>
         <input type="text" id="Marking" value="" />
       </div>
+
+      
     </div>
+
+
 
     <div class="right_container">
       <div><p id="text_output"></p></div>

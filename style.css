@@ -1,3 +1,8 @@
+
+.package_type{
+  margin-bottom: 20px;
+}
+
 #text_output {
   margin-left: 10px;
   margin-right: 10px;
@@ -6,16 +11,17 @@
 .right_container {
   display: inline-block;
   position: absolute;
-  width: 700px;
-  height: 750px;
-  background-color: #0c7b93;
-  color: #f6f6f6;
+  width: 900px;
+  height: 870px;
+  background-color: #09595a;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 #text_area {
   position: absolute;
   margin-left: 20px;
-  margin-top: 800px;
+  margin-top: 1000px;
 }
 .textBox {
   margin-left: 10px;
