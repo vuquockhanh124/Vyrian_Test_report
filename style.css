@@ -22,6 +22,9 @@
   position: absolute;
   margin-left: 20px;
   margin-top: 1000px;
+  background-color: #0F3D3E;
+  color:#F1F1F1;
+  font-size: 18px;
 }
 .textBox {
   margin-left: 10px;
