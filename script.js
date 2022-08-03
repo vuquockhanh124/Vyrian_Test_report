@@ -118,7 +118,7 @@ btn.onclick = () => {
     package_type +
     " for external visual inspection. Detailed visual analysis was performed on " +
     sample +
-    " samples.  All testing was performed and sampled according to the AS6081 standard." +
+    " samples. All testing was performed and sampled according to the AS6081 standard." +
     "<br>" +
     "<br>";
 
@@ -219,7 +219,7 @@ btn.onclick = () => {
     final + "\r\n" + "\r\n";
 
   text +="Package: "+inorpar+ "<br>" + "<br>" + "<br>" + "<br>"; 
-  document.getElementById("text_area").value +="Package: "+inorpar+ "\r\n" + "\r\n" + "\r\n" + "\r\n"
+  document.getElementById("text_area").value +="Packaging: "+inorpar+ "\r\n" + "\r\n" + "\r\n" + "\r\n"
 
 
   if (decap.checked) {
