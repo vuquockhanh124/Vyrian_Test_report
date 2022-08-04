@@ -25,6 +25,7 @@ const text_output = document.querySelector("#text_output");
 
 let text_area = document.getElementById("text_area").value;
 
+
 let text = "";
 let empty = "";
 
@@ -37,6 +38,29 @@ function checkSample(x) {
     return 122;
   }
 }
+
+function fillTest(testtype){
+   
+  if(testtype==="AS6081"){
+    selectAll();
+    
+    soldering.checked=false;
+  }
+  else if(testtype==="Connector"){
+    deselectAll();
+    dimension.checked=true;
+    terminal.checked=true;
+
+  }
+  else if(testtype==="RegularIC"){
+    deselectAll();
+    dimension.checked=true;
+    terminal.checked=true;
+    chemical.checked=true;
+  }
+}
+  
+  
 
 function terminalCheck(x) {
   if (x == 0) {
@@ -94,6 +118,8 @@ btn.onclick = () => {
   let passive_value=document.getElementById("passive_value").value;
 
   let tolerance=document.getElementById("tolerence").value;
+
+  
 
   text += "Classification: Unused" + "<br>" + "<br>";
 
@@ -284,7 +310,7 @@ let ter =
 let chem =
   "Remarking/Resurfacing: 3 of 3 sample parts passed the remarking and resurfacing test and there is no indication of any tampering on the surface.";
 let final =
-  "Note: Radiological inspection and XRF material analysis was performed on the sample size in accordance with AS6081 standard";
+  "Note: Radiological inspection and XRF material analysis was performed on the sample size in accordance with AS6081 standard.";
 
 let xrf_text =
   "XRF Material Analysis: 3 of 3 sample parts passed XRF material analysis.";

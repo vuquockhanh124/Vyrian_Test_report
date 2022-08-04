@@ -54,3 +54,25 @@ body {
   background-color: #142850;
   color: white;
 }
+
+
+.Test{
+  position: absolute;
+  display: inline-block;
+  width: 520;
+  height: 220px;
+  margin-top: 35px;
+}
+
+.Package{
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 220px;
+  margin-top: 30px;
+}
+
+.Outter_Package{
+  width: 800px;
+  height: 220px;
+}
