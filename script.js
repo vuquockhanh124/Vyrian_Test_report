@@ -20,7 +20,7 @@ const decap = document.querySelector("#Decap");
 
 const btn = document.querySelector("#btn");
 const btn_clear = document.querySelector("#btn_clear");
-const text_output = document.querySelector("#text_output");
+ 
 
 
 let text_area = document.getElementById("text_area").value;
@@ -180,31 +180,24 @@ btn.onclick = () => {
 
   if(passive!=null){
     if (passive.value=="Capacitance"){
-      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+ "<br>" + "<br>";
+  
       document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+"\r\n" + "\r\n";
     }
 
     else if (passive.value=="Resistance"){
-      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+ "<br>" + "<br>";
+      
       document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +"% tolerance"+"\r\n" + "\r\n";
     }
 
     else if (passive.value=="Inductance"){
-      text+= passive.value+" is in the range of "+passive_value +" with "+tolerance +" tolerance"+ "<br>" + "<br>";
+      
       document.getElementById("text_area").value +=passive.value+" is in the range of "+passive_value +" with "+tolerance +" tolerance"+"\r\n" + "\r\n";
     }
   }
 
   //Xray test
   if (xray.checked) {
-    text +=
-      "Radiological Inspection: " +
-      xray_sample +
-      " of " +
-      xray_sample +
-      " sample parts passed radiological inspection. No abnormalities observed." +
-      "<br>" +
-      "<br>";
+   
     document.getElementById("text_area").value +=
       "Radiological Inspection: " +
       xray_sample +
@@ -216,20 +209,13 @@ btn.onclick = () => {
   }
   //xrf
   if (xrf.checked) {
-    text += xrf_text + "<br>" + "<br>";
+   
     document.getElementById("text_area").value += xrf_text + "\r\n" + "\r\n";
   }
   // ddecap
 
   if (decap.checked) {
-    text +=
-      "Decapsulation Testing: " +
-      numDecap +
-      " of " +
-      numDecap +
-      " sample parts passed decapsulation testing with favorable results." +
-      "<br>" +
-      "<br>";
+    
     document.getElementById("text_area").value +=
       "Decapsulation Testing: " +
       numDecap +
@@ -240,11 +226,11 @@ btn.onclick = () => {
       "\r\n";
   }
   // Note
-  text += final + "<br>" + "<br>";
+   
   document.getElementById("text_area").value +=
     final + "\r\n" + "\r\n";
 
-  text +="Package: "+inorpar+ "<br>" + "<br>" + "<br>" + "<br>"; 
+    
   document.getElementById("text_area").value +="Packaging: "+inorpar+ "\r\n" + "\r\n" + "\r\n" + "\r\n"
 
 
@@ -265,18 +251,12 @@ btn.onclick = () => {
     }
   }
 
-  Print_report(); // last line to store input into text box
-
-  console.log(text_output);
+   
 
   console.log("Package type is:" + package_type);
 };
 
-function Print_report() {
-  text_output.innerHTML = text;
-  text_area.value = text;
-}
-
+ 
 // btn.addEventListener('click',fun1);
 
 function terminalStatus() {

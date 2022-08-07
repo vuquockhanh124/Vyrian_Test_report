@@ -3,28 +3,22 @@
   margin-bottom: 20px;
 }
 
-#text_output {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.right_container {
+.right_container{
   display: inline-block;
   position: absolute;
-  width: 900px;
-  height: 870px;
-  background-color: #09595a;
-  color: #ffffff;
-  font-size: 18px;
+  margin-top:20px;
+  height: 900px;
+  width: 1000px;
 }
 
+ 
+
 #text_area {
-  position: absolute;
-  margin-left: 20px;
-  margin-top: 1000px;
+   
   background-color: #0F3D3E;
   color:#F1F1F1;
   font-size: 18px;
+   
 }
 .textBox {
   margin-left: 10px;
@@ -48,11 +42,15 @@
   position: relative;
   width: 800px;
   height: 1000;
+  margin-top: 30px;
+  margin-left:20px;
 }
 
 body {
-  background-color: #142850;
-  color: white;
+  height: 5000px;
+  background-color: #142850 !important;
+  color: white !important;
+  background-image: linear-gradient(to left top, #001d48, #00365f, #004f6f, #006776, #007f78);
 }
 
 
