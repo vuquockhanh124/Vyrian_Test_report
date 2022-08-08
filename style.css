@@ -8,7 +8,7 @@
   position: absolute;
   margin-top:20px;
   height: 900px;
-  width: 1000px;
+  width: auto;
 }
 
  
@@ -41,13 +41,13 @@
   display: inline-block;
   position: relative;
   width: 800px;
-  height: 1000;
+  height: 1300px;
   margin-top: 30px;
   margin-left:20px;
 }
 
 body {
-  height: 5000px;
+  height: auto;
   background-color: #142850 !important;
   color: white !important;
   background-image: linear-gradient(to left top, #001d48, #00365f, #004f6f, #006776, #007f78);
