@@ -57,54 +57,60 @@
     </nav>
     <!-- Navbar -->
     <div class="left_container">
-      <div>
-        <label for="PartNumber">Part Number </label>
-        <input class="textBox" type="text" id="PartNumber" value="" />
-        <label for="Quantity">Quantity </label>
-        <input class="textBox textBox3" type="text" id="Quantity" value="" />
+      <div class="top_label_space">
+        <label class="top_label" for="PartNumber">Part Number </label>
+        <input type="text" id="PartNumber" value="" />
+        <label class="top_label" for="DC">Date Code </label>
+        <input type="text" id="DC" value="" />
+        
       </div>
 
-      <div>
-        <label for="DC">Date Code </label>
-        <input class="textBox textBox2" type="text" id="DC" value="" />
-        <label for="LotCode">Lot Code </label>
-        <input class="textBox" type="text" id="LotCode" value="" />
+      <div class="top_label_space_2">
+        <label class="top_label" for="Quantity">Quantity </label>
+        <input type="text" id="Quantity" value="" />
+        <label class="top_label" for="LotCode">Lot Code </label>
+        <input type="text" id="LotCode" value="" />
       </div>
 
       
       <div class="Outter_Package">
         <div class="Package">
-          <div>
+          
+          
+
             <h1>Package type?</h1>
-            <input type="radio" name="package_type" id="tray" value="a tray" />
-            <label for="tray">Tray</label>
-            <input type="radio" name="package_type" id="trays" value="trays" />
-            <label for="trays">Trays</label>
-          </div>
-  
-          <div>
-            <input
-              type="radio"
-              name="package_type"
-              id="cut_tape"
-              value="cut tape"
-            />
-            <label for="cut_tape">Cut tape</label>
-            <input type="radio" name="package_type" id="reel" value="a reel" />
-            <label for="reel">Reel</label>
-            <input type="radio" name="package_type" id="reels" value="reels" />
-            <label for="reels">Reels</label>
-            <br />
-            <input type="radio" name="package_type" id="bulk" value="a bulk" />
-            <label for="bulk">Bulk</label>
-            <input type="radio" name="package_type" id="bulks" value="bulks" />
-            <label for="bulks">Bulks</label>
-            <br>
-            <input type="radio" name="package_type" id="tube" value="a tube" />
-            <label for="tube">Tube</label>
-            <input type="radio" name="package_type" id="tubes" value="tubes" />
-            <label for="tubes">Tubes</label>
-          </div>
+              <div> 
+                <input type="radio" name="package_type" id="tray" value="a tray" />
+                <label for="tray">Tray</label>
+                <input type="radio" name="package_type" id="trays" value="trays" />
+                <label for="trays">Trays</label>
+              </div>
+
+              <div>
+                <input type="radio" name="package_type" id="cut_tape" value="cut tape"
+                />
+                <label for="cut_tape">Cut tape</label>
+                <input type="radio" name="package_type" id="reel" value="a reel" />
+                <label for="reel">Reel</label>
+                <input type="radio" name="package_type" id="reels" value="reels" />
+                <label for="reels">Reels</label>
+                
+              </div>
+            
+              <div>
+                <input type="radio" name="package_type" id="bulk" value="a bulk" />
+                <label for="bulk">Bulk</label>
+                <input type="radio" name="package_type" id="bulks" value="bulks" />
+                <label for="bulks">Bulks</label>
+              </div>
+            
+              <div>
+                <input type="radio" name="package_type" id="tube" value="a tube" />
+                <label for="tube">Tube</label>
+                <input type="radio" name="package_type" id="tubes" value="tubes" />
+                <label for="tubes">Tubes</label>
+              </div>
+          
         </div>
         
   
@@ -126,7 +132,7 @@
       
 
 
-      <div>
+      <div class="what_test">
         <h1>What test did you do?</h1>
         <input
           type="checkbox"
@@ -211,7 +217,7 @@
 
 
         </div>
-        <h2>Any Problem?</h2>
+        <h1>Any Problem?</h1>
 
         <input type="checkbox" name="problem" id="scratches" value="1" />
         <label for="scratches">Scratches</label>
@@ -228,7 +234,7 @@
 
       <div class="package_type">
         <div></div>
-          <h2>Package type? </h2>
+          <h1>Package type? </h1>
           <input type="radio" name="Intact_Or_Partial" id="Intact" value="Intact">
           <label for="Intact">Intact</label>
           <input type="radio" name="Intact_Or_Partial" id="Partial" value="Partial">

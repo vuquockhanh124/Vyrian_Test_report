@@ -17,7 +17,8 @@
    
   background-color: #0F3D3E;
   color:#F1F1F1;
-  font-size: 18px;
+  font-size: 20px;
+  margin-left: 30px;
    
 }
 .textBox {
@@ -40,19 +41,51 @@
 .left_container {
   display: inline-block;
   position: relative;
-  width: 800px;
+  width: auto;
   height: 1300px;
   margin-top: 30px;
-  margin-left:20px;
+  margin-left:100px;
 }
 
 body {
+  position: relative;
+
+  z-index: 0;
   height: auto;
+  font-size: 24px !important;
   background-color: #142850 !important;
   color: white !important;
   background-image: linear-gradient(to left top, #001d48, #00365f, #004f6f, #006776, #007f78);
 }
 
+
+
+
+.Package{
+  position: relative;
+  display: inline-block;
+  width: 500px;
+  height: 220px;
+  margin-top: 30px;
+}
+
+.Outter_Package{
+  width: 800px;
+  height: 300px;
+}
+
+
+ 
+
+label{
+  font-size:28px;
+}
+
+.Package_Type{
+  position:absolute;
+  display: inline-block;
+  width:500px;
+}
 
 .Test{
   position: absolute;
@@ -62,15 +95,50 @@ body {
   margin-top: 35px;
 }
 
-.Package{
-  position: relative;
-  display: inline-block;
-  width: 280px;
-  height: 220px;
-  margin-top: 30px;
+.top_label{
+  width:170px;
+  height:45px;
+  font-weight: bolder;
+  font-size: 26px;
+ 
 }
 
-.Outter_Package{
-  width: 800px;
-  height: 300px;
+.top_label_space{
+  display: inline-block;
+  height:50px;
+  width: 480px;
+  margin:auto;
+}
+
+.top_label_space_2{
+  display: inline-block;
+  height:50px;
+  width: 480px;
+  margin-top:30px;
+}
+
+.what_test{
+  margin-bottom: 20px;
+}
+
+h1{
+  margin-top:20px  !important;
+  font-weight: bolder !important;
+  background: -webkit-linear-gradient(45deg ,#00ff77,    #00fbff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+input[type=radio]{
+  border:0px;
+  width: 20px ; 
+  height: 20px;
+  margin-left:10px;
+}
+
+input[type=checkbox]{
+  border:0px;
+  width: 20px ; 
+  height: 20px;
+  margin-left:10px;
 }
