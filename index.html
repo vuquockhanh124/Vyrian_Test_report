@@ -5,11 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+   
     <script
       src="https://kit.fontawesome.com/a358b7a37b.js"
       crossorigin="anonymous"
@@ -19,262 +15,307 @@
 
   <body>
 
+    <!-- navbar -->
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li> <button class="nav-tab" onclick="OpenTab('tab-Report')">Test report </button></li>
+          <li> <button class="nav-tab" onclick="OpenTab('tab-timer')">Timer</button></li>
+          <li> <button class="nav-tab" onclick="OpenTab('setting')">Setting</button></li>
+        </ul>
+        
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Vyrian</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Tools
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Calculator</a></li>
-                <li><a class="dropdown-item" href="#">Timer</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
+      </nav>
+
+
+    </div>
+    <!-- navbar -->
+
+    <div class="tab" id="tab-Report">
+
+
+      <div class="left_container">
+        
+        <div class="label_spacing">
+          <label class="top_label" for="PartNumber">Part Number </label>
+          <input class="textbox_space" type="text" id="PartNumber" value="" />
+        </div>
+
+        <div class="label_spacing">
+          <label class="top_label" for="Quantity">Quantity </label>
+          <input class="textbox_space" type="text" id="Quantity" value="" />
+        </div>
+          
+        <div class="label_spacing">
+          
+          <label class="top_label" for="DC">Date Code </label>
+          <input class="textbox_space" type="text" id="DC" value="" />
+        </div>
+
+        <div class="label_spacing">
+          <label class="top_label" for="LotCode">Lot Code </label>
+          <input class="textbox_space" type="text" id="LotCode" value="" />
+        </div>
+        
+  
+        <div class="Outter_Package">
+          <div class="Package">
+            
+            
+  
+              <h1 class="h1_property">Package type?</h1>
+                <div> 
+                  <input type="radio" name="package_type" id="tray" value="a tray" />
+                  <label for="tray">Tray</label>
+                  <input type="radio" name="package_type" id="trays" value="trays" />
+                  <label for="trays">Trays</label>
+                </div>
+  
+                <div>
+                  <input type="radio" name="package_type" id="cut_tape" value="cut tape"
+                  />
+                  <label for="cut_tape">Cut tape</label>
+                  <input type="radio" name="package_type" id="reel" value="a reel" />
+                  <label for="reel">Reel</label>
+                  <input type="radio" name="package_type" id="reels" value="reels" />
+                  <label for="reels">Reels</label>
+                  
+                </div>
+              
+                <div>
+                  <input type="radio" name="package_type" id="bulk" value="a bulk" />
+                  <label for="bulk">Bulk</label>
+                  <input type="radio" name="package_type" id="bulks" value="bulks" />
+                  <label for="bulks">Bulks</label>
+                </div>
+              
+                <div>
+                  <input type="radio" name="package_type" id="tube" value="a tube" />
+                  <label for="tube">Tube</label>
+                  <input type="radio" name="package_type" id="tubes" value="tubes" />
+                  <label for="tubes">Tubes</label>
+                </div>
+            
+          </div>
+          
+    
+          <div class="Test">
+            <h1 class="h1_property">What kind of test?</h1>
+            <input type="radio" id="as6081" name="test_type" onclick="fillTest('AS6081');">
+            <label for="as6081" >AS6081</label>
+    
+            <input type="radio" id="Connector" name="test_type" onclick="fillTest('Connector')";>
+            <label for="Connector">Connector</label>
+    
+            <input type="radio" id="Regular" name="test_type" onclick="fillTest('RegularIC')";>
+            <label for="Regular">Regular IC</label>
+    
+    
+          </div>
+        </div>
+  
+        
+  
+  
+        <div class="what_test">
+          <h1 class="h1_property">What test did you do?</h1>
+          <input
+            type="checkbox"
+            name="test_name"
+            id="Chemical"
+            value="Chemical"
+          />
+          <label for="Chemical">Chemical Test</label>
+  
+          <input
+            type="checkbox"
+            name="test_name"
+            id="Dimension"
+            value="Dimension"
+          />
+          <label for="Dimension">Dimension</label>
+  
+          <input
+            type="checkbox"
+            name="test_name"
+            id="Terminal"
+            value="Terminal"
+          />
+          <label for="Terminal">Terminal</label>
+  
+          <input
+            type="checkbox"
+            name="test_name"
+            id="Soldering"
+            value="Soldering"
+          />
+          <label for="Soldering">Soldering </label>
+  
+          <input type="checkbox" name="test_name" id="Xray" value="Xray" />
+          <label for="Xray">Xray </label>
+  
+          <input type="checkbox" name="test_name" id="XRF" value="XRF" />
+          <label for="XRF">XRF </label>
+  
+          <input type="checkbox" name="test_name" id="Decap" value="Decap" />
+          <label for="Decap">Decapsulation </label>
+  
+          <input
+            type="checkbox"
+            onchange="check_status()"
+            id="All"
+            value="SelectAll"
+          />
+          <label for="All">Select all above </label>
+        </div>
+  
+        <div>
+          <!-- <input type="radio" name="yes_no" id="yes" value="1">P
+                    <label for="yes">Yes</label>
+  
+                   <input type="radio" name="yes_no" id="no" value="0">
+                    <label for="no">No</label> -->
+  
+            <!-- Electrical  -->
+          <div>
+            <h1 class="h1_property">Electrical? </h1>
+            
+            <div> 
+              <input type="radio" name="electrical" id="capacitor" value="Capacitance">
+              <label for="capacitor">Capacitor</label>
+    
+              <input type="radio" name="electrical" id="resistor" value="Resistance">
+              <label for="resistor">Resistor</label>
+    
+              <input type="radio" name="electrical" id="inductor" value="Inductance">
+              <label for="inductor">Inductance</label>
+            </div>
+  
+            <div style="margin-top:15px; margin-left:10px">
+              <input type="text" placeholder="Value for Passive" id="passive_value" value="">
+              <input type="text" placeholder="Tolerence" id="tolerence" value="">
+            </div>
+  
            
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+  
+  
+  
+  
+          </div>
+          <h1 class="h1_property">Any Problem?</h1>
+  
+          <input type="checkbox" name="problem" id="scratches" value="1" />
+          <label for="scratches">Scratches (Terminal)</label>
+  
+          <input type="checkbox" name="problem" id="testmark" value="2" />
+          <label for="testmark">Test Mark</label>
+  
+          <input type="checkbox" name="problem" id="oxidation" value="3" />
+          <label for="oxidation">Oxdiation</label>
+  
+          <input type="checkbox" name="problem" id="NoPod" value="NoPod" />
+          <label for="NoPod">No POD</label>
+
+          
         </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-    <div class="left_container">
-      <div class="top_label_space">
-        <label class="top_label" for="PartNumber">Part Number </label>
-        <input type="text" id="PartNumber" value="" />
-        <label class="top_label" for="DC">Date Code </label>
-        <input type="text" id="DC" value="" />
+
+        <div style="margin-top:15px;">
+          <input type="checkbox" name="problem" id="scratches_surface" value="1" />
+          <label for="scratches_surface">Scratches (Top Surface)</label>
+        </div>
+  
+        <div class="package_type">
+          <div></div>
+            <h1 class="h1_property">Package type? </h1>
+            <input type="radio" name="Intact_Or_Partial" id="Intact" value="Intact">
+            <label for="Intact">Intact</label>
+            <input type="radio" name="Intact_Or_Partial" id="Partial" value="Partial">
+            <label for="Partial">Partial</label>
+        
+          
+        </div>
+  
+        <button id="btn">Submit</button>
+        <button id="btn_clear" onclick="document.location.reload(true)">
+          Clear Text
+        </button>
+  
+        <div style="margin-top:10px">
+          <label for="NumDecap">How many pcs for Decap? </label>
+          <input type="text" id="NumDecap" value="" />
+        </div>
+  
+        <div style="margin-top: 10px; margin-left: 5px">
+          <label for="Logo">What logo was observed? </label>
+          <input type="text" id="Logo" value="" />
+  
+          <label for="Marking">What marking was observed? </label>
+          <input type="text" id="Marking" value="" />
+        </div>
+  
         
       </div>
-
-      <div class="top_label_space_2">
-        <label class="top_label" for="Quantity">Quantity </label>
-        <input type="text" id="Quantity" value="" />
-        <label class="top_label" for="LotCode">Lot Code </label>
-        <input type="text" id="LotCode" value="" />
+  
+  
+  
+      <div class="right_container">
+         
+        <textarea name="Text" id="text_area" cols="100" rows="45"></textarea>
+  
+        <button id="copyAll" onclick="Copy_area()">
+          <i class="fa-solid fa-copy"></i>
+        </button>
       </div>
+    
+    
+    
+    </div> 
 
+    <div class="tab" id="tab-timer" style="display:none">
       
-      <div class="Outter_Package">
-        <div class="Package">
-          
-          
-
-            <h1>Package type?</h1>
-              <div> 
-                <input type="radio" name="package_type" id="tray" value="a tray" />
-                <label for="tray">Tray</label>
-                <input type="radio" name="package_type" id="trays" value="trays" />
-                <label for="trays">Trays</label>
-              </div>
-
-              <div>
-                <input type="radio" name="package_type" id="cut_tape" value="cut tape"
-                />
-                <label for="cut_tape">Cut tape</label>
-                <input type="radio" name="package_type" id="reel" value="a reel" />
-                <label for="reel">Reel</label>
-                <input type="radio" name="package_type" id="reels" value="reels" />
-                <label for="reels">Reels</label>
-                
-              </div>
-            
-              <div>
-                <input type="radio" name="package_type" id="bulk" value="a bulk" />
-                <label for="bulk">Bulk</label>
-                <input type="radio" name="package_type" id="bulks" value="bulks" />
-                <label for="bulks">Bulks</label>
-              </div>
-            
-              <div>
-                <input type="radio" name="package_type" id="tube" value="a tube" />
-                <label for="tube">Tube</label>
-                <input type="radio" name="package_type" id="tubes" value="tubes" />
-                <label for="tubes">Tubes</label>
-              </div>
-          
+      <div class="watch">
+        <input class="text-input" id="hour" type="number" min="0" max="12" placeholder="H" value="">
+        <label for="hour">Hour</label>
+        <input class="text-input" id="minute" type="number" min="0" max="59" placeholder="M">
+        <label for="minute">Minute</label>
+        <input class="text-input" id="second" type="number" min="0" max="59" placeholder="S" value="">
+        <label for="second">Second</label>
+        <div class="watch-button">
+           <button class="watch_button btn-start" id="button_start" onclick="watch_start()">Start</button>
+        
+           <button class="watch_button btn-stop" onclick="watch_stop()">Stop</button>
+        
+           <button class="watch_button btn-reset" onclick="watch_reset()">Reset</button>
         </div>
         
-  
-        <div class="Test">
-          <h1>What kind of test?</h1>
-          <input type="radio" name="test_type" onclick="fillTest('AS6081');">
-          <label for="as6081">AS6081</label>
-  
-          <input type="radio" name="test_type" onclick="fillTest('Connector')";>
-          <label for="Connector">Connector</label>
-  
-          <input type="radio" name="test_type" onclick="fillTest('RegularIC')";>
-          <label for="Regular">Regular IC</label>
-  
-  
-        </div>
-      </div>
-
-      
-
-
-      <div class="what_test">
-        <h1>What test did you do?</h1>
-        <input
-          type="checkbox"
-          name="test_name"
-          id="Chemical"
-          value="Chemical"
-        />
-        <label for="Chemical">Chemical Test</label>
-
-        <input
-          type="checkbox"
-          name="test_name"
-          id="Dimension"
-          value="Dimension"
-        />
-        <label for="Dimension">Dimension</label>
-
-        <input
-          type="checkbox"
-          name="test_name"
-          id="Terminal"
-          value="Terminal"
-        />
-        <label for="Terminal">Terminal</label>
-
-        <input
-          type="checkbox"
-          name="test_name"
-          id="Soldering"
-          value="Soldering"
-        />
-        <label for="Soldering">Soldering </label>
-
-        <input type="checkbox" name="test_name" id="Xray" value="Xray" />
-        <label for="Xray">Xray </label>
-
-        <input type="checkbox" name="test_name" id="XRF" value="XRF" />
-        <label for="XRF">XRF </label>
-
-        <input type="checkbox" name="test_name" id="Decap" value="Decap" />
-        <label for="Decap">Decapsulation </label>
-
-        <input
-          type="checkbox"
-          onchange="check_status()"
-          id="All"
-          value="SelectAll"
-        />
-        <label for="All">Select all above </label>
       </div>
 
       <div>
-        <!-- <input type="radio" name="yes_no" id="yes" value="1">P
-                  <label for="yes">Yes</label>
 
-                 <input type="radio" name="yes_no" id="no" value="0">
-                  <label for="no">No</label> -->
-
-          <!-- Electrical  -->
-        <div>
-          <h1>Electrical? </h1>
-          
-          <div> 
-            <input type="radio" name="electrical" id="capacitor" value="Capacitance">
-            <label for="capacitor">Capacitor</label>
-  
-            <input type="radio" name="electrical" id="resistor" value="Resistance">
-            <label for="resistor">Resistor</label>
-  
-            <input type="radio" name="electrical" id="inductor" value="Inductance">
-            <label for="inductor">Inductance</label>
-          </div>
-
-          <div style="margin-top:15px; margin-left:10px">
-            <input type="text" placeholder="Value for Passive" id="passive_value" value="">
-            <input type="text" placeholder="Tolerence" id="tolerence" value="">
-          </div>
-
-         
-
-
-
-
-        </div>
-        <h1>Any Problem?</h1>
-
-        <input type="checkbox" name="problem" id="scratches" value="1" />
-        <label for="scratches">Scratches</label>
-
-        <input type="checkbox" name="problem" id="testmark" value="2" />
-        <label for="testmark">Test Mark</label>
-
-        <input type="checkbox" name="problem" id="oxidation" value="3" />
-        <label for="oxidation">Oxdiation</label>
-
-        <input type="checkbox" name="problem" id="NoPod" value="NoPod" />
-        <label for="NoPod">No POD</label>
-      </div>
-
-      <div class="package_type">
-        <div></div>
-          <h1>Package type? </h1>
-          <input type="radio" name="Intact_Or_Partial" id="Intact" value="Intact">
-          <label for="Intact">Intact</label>
-          <input type="radio" name="Intact_Or_Partial" id="Partial" value="Partial">
-          <label for="Partial">Partial</label>
-      
-        
-      </div>
-
-      <button id="btn">Submit</button>
-      <button id="btn_clear" onclick="document.location.reload(true)">
-        Clear Text
-      </button>
-
-      <div style="margin-top:10px">
-        <label for="NumDecap">How many pcs for Decap? </label>
-        <input type="text" id="NumDecap" value="" />
-      </div>
-
-      <div style="margin-top: 10px; margin-left: 5px">
-        <label for="Logo">What logo was observed? </label>
-        <input type="text" id="Logo" value="" />
-
-        <label for="Marking">What marking was observed? </label>
-        <input type="text" id="Marking" value="" />
       </div>
 
       
     </div>
 
+    <div class="tab" id="setting" style="display:none">
+      
+      <H1 class="h1_property">Set background color</H1>
 
+      <input type="radio" name="color_mode" onclick="changeBackground('dark')" id="dark_mode">
+      <label for="dark_mode"> Dark Mode</label>
 
-    <div class="right_container">
-       
-      <textarea name="Text" id="text_area" cols="110" rows="40"></textarea>
+      <input type="radio" name="color_mode" onclick="changeBackground('light')" id="light_mode">
+      <label for="light_mode"> Light Mode</label>
 
-      <button id="copyAll" onclick="Copy_area()">
-        <i class="fa-solid fa-copy"></i>
-      </button>
+  
     </div>
+    <!-- end container -->
+    
 
     <script src="script.js"></script>
+
+   
   </body>
+
+ 
 </html>

@@ -98,15 +98,15 @@ btn.onclick = () => {
     'input[name="package_type"]:checked'
   ).value;
   
-  let partNumber = document.getElementById("PartNumber").value;
-  let Quantity = document.getElementById("Quantity").value;
+  let partNumber = document.getElementById("PartNumber").value.trim();
+  let Quantity = document.getElementById("Quantity").value.trim();
 
-  let lotcode = document.getElementById("LotCode").value;
-  let DC = document.getElementById("DC").value;
+  let lotcode = document.getElementById("LotCode").value.trim();
+  let DC = document.getElementById("DC").value.trim();
 
   let a = document.querySelector('input[id="scratches"]:checked');
 
-  let numDecap = document.getElementById("NumDecap").value;
+  let numDecap = document.getElementById("NumDecap").value.trim();
   let sample = checkSample(Quantity);
 
   let xray_sample = checkXray(Quantity);
@@ -115,9 +115,9 @@ btn.onclick = () => {
 
   let passive=document.querySelector('input[name="electrical"]:checked');
 
-  let passive_value=document.getElementById("passive_value").value;
+  let passive_value=document.getElementById("passive_value").value.trim();
 
-  let tolerance=document.getElementById("tolerence").value;
+  let tolerance=document.getElementById("tolerence").value.trim();
 
   
 
@@ -380,3 +380,91 @@ function Copy_area() {
   // x.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(x);
 }
+
+
+
+// Navigation function
+
+function OpenTab(tab_name){
+
+  let array= document.getElementsByClassName("tab");
+  for(var x=0; x<array.length;x++){
+    array[x].style.display="none";
+  }
+
+  document.getElementById(tab_name).style.display="block";
+  
+}
+
+
+// Watch function
+
+
+
+
+
+ // 1000 mili second= 1s 
+
+let hour= document.getElementsByClassName("hour").value;
+let minute= document.getElementsByClassName("minute").value;
+let second= document.getElementById('second').value;
+let totalsecond= hour*3600+ minute*60+ second;
+
+
+let start=document.getElementById('button_start');
+let startTimer=null;
+
+
+
+
+function watch_start(){
+if(hour!=0 || minute!=0 || second!=0){
+
+  if(second==1){
+    document.getElementById('second').value=60;
+
+  }
+  setInterval(function(){ document.getElementById('second').value-=1},1500);
+  console.log("Second is: "+second);
+}
+}
+
+function watch_stop(){
+  
+}
+
+function watch_reset(){
+  
+}
+
+
+
+// change background color
+
+function changeBackground (value){
+    let h1_property= document.querySelectorAll(".h1_property");
+    let top_label= document.querySelectorAll(".top_label");
+    let text_area_color=document.getElementById('text_area');
+
+    console.log(h1_property.length);
+    const darkcolor= "linear-gradient(pink, red)";
+    document.body.style.backgroundColor= "black";
+    document.body.style.backgroundImage= "none";
+
+    for(var x=0; x<h1_property.length;x++){
+   
+    h1_property[x].style.backgroundImage="linear-gradient(to right bottom, #af55ea, #d439c9, #eb16a5, #f60080, #f6005c)";
+    h1_property[x].style.fontWeight="900"
+
+    }
+
+    for(var x=0; x<top_label.length; x++){
+      top_label[x].style.color="#EEE3C1";
+    }
+
+    text_area_color.style.backgroundColor="#293852";
+
+   
+}
+
+293852
