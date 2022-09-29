@@ -114,7 +114,7 @@ label{
 .label_spacing{    
   position: relative;
   
-  width: 512px;
+  width: 630px;
   height: 70px;
   margin-right:30px;
   margin-top:20px
@@ -123,7 +123,7 @@ label{
 
 .textbox_space{
   height: 40%;
-  width: 60%;
+  width: 55%;
   float:right;
   margin-top:0px;
   font-size: 30px;
@@ -243,3 +243,27 @@ input[type=checkbox]{
 .fa-copy{
  margin:auto;
 }
+
+
+.fa-circle-exclamation{
+  position: absolute;
+  margin-top:7px;
+  margin-left:10px;
+}
+
+
+
+#popuptext{
+  visibility: hidden; 
+  display: inline-block;
+  position: absolute ;
+  width: 200px;
+  background-color:#fff;
+  color:black;
+  margin-left:50px;
+  margin-top: -140px;
+  text-align: center;
+}
+
+
+ 

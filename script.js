@@ -20,6 +20,19 @@ const decap = document.querySelector("#Decap");
 
 const btn = document.querySelector("#btn");
 const btn_clear = document.querySelector("#btn_clear");
+
+var exclamation= document.getElementById("exclamation");
+
+
+exclamation.onmouseover = function(){
+  document.getElementById("popuptext").style.visibility="visible";
+}
+
+exclamation.onmouseout = function(){
+  document.getElementById("popuptext").style.visibility="hidden";
+}
+ 
+
  
 
 
@@ -126,11 +139,17 @@ btn.onclick = () => {
   document.getElementById("text_area").value +=
     "Classification: Unused" + "\r\n" + "\r\n";
 
-  text += "Date Code: " + DC + "<br>" + "<br>";
-
+  
+  if(DC==""){
+    DC="Unknown";
+  }
+  
   document.getElementById("text_area").value +=
-    "Date Code: " + DC + "\r\n" + "\r\n";
-
+  "Date Code: " + DC + "\r\n" + "\r\n";
+  
+  if(lotcode==""){
+    lotcode="Unknown";
+  }
   text += "Lot Code: " + lotcode + "<br>" + "<br>";
 
   document.getElementById("text_area").value +=
@@ -300,18 +319,8 @@ function decap_summary(size) {
   let marking = document.getElementById("Marking").value;
   let logo = document.getElementById("Logo").value;
   for (var x = 0; x < size; x++) {
-    text +=
-      "Sample " +
-      (x + 1) +
-      ", Die " +
-      (x + 1) +
-      ': Manufacturer logo "' +
-      logo +
-      '" was observed. "' +
-      marking +
-      '" was observed- this could be the original device code.' +
-      "<br>" +
-      "<br>";
+    if(logo!="" && marking!=""){
+  
     document.getElementById("text_area").value +=
       "Sample " +
       (x + 1) +
@@ -324,6 +333,12 @@ function decap_summary(size) {
       '" was observed- this could be the original device code.' +
       "\r\n" +
       "\r\n";
+    }
+    else{
+    
+    document.getElementById("text_area").value+= "Sample " + (x + 1) + ", Die " + (x + 1) + ": No abnormalities observed with die."+ "\r\n" + "\r\n";
+
+    }
   }
 }
 function check_status() {

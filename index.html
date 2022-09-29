@@ -48,13 +48,15 @@
           
         <div class="label_spacing">
           
-          <label class="top_label" for="DC">Date Code </label>
-          <input class="textbox_space" type="text" id="DC" value="" />
+          <label class="top_label" for="DC">Date Code</label>
+          <input class="textbox_space" placeholder="Leave blank for Unknown" type="text" id="DC" value=""  />
+                    
+
         </div>
 
         <div class="label_spacing">
           <label class="top_label" for="LotCode">Lot Code </label>
-          <input class="textbox_space" type="text" id="LotCode" value="" />
+          <input class="textbox_space" placeholder="Leave blank for Unknown" type="text" id="LotCode" value="" />
         </div>
         
   
@@ -181,13 +183,13 @@
             <h1 class="h1_property">Electrical? </h1>
             
             <div> 
-              <input type="radio" name="electrical" id="capacitor" value="Capacitance">
+              <input type="checkbox" name="electrical" id="capacitor" value="Capacitance">
               <label for="capacitor">Capacitor</label>
     
-              <input type="radio" name="electrical" id="resistor" value="Resistance">
+              <input type="checkbox" name="electrical" id="resistor" value="Resistance">
               <label for="resistor">Resistor</label>
     
-              <input type="radio" name="electrical" id="inductor" value="Inductance">
+              <input type="checkbox" name="electrical" id="inductor" value="Inductance">
               <label for="inductor">Inductance</label>
             </div>
   
@@ -243,6 +245,17 @@
         <div style="margin-top:10px">
           <label for="NumDecap">How many pcs for Decap? </label>
           <input type="text" id="NumDecap" value="" />
+
+          <i id="exclamation" class="fa-solid fa-circle-exclamation "></i>
+
+
+          <div id="popuptext">
+           <p>Leave the last two blank if no marking observed</p> 
+          </div>
+
+
+
+
         </div>
   
         <div style="margin-top: 10px; margin-left: 5px">
