@@ -222,10 +222,26 @@
         </div>
 
         <div style="margin-top:15px;">
-          <input type="checkbox" name="problem" id="scratches_surface" value="1" />
-          <label for="scratches_surface">Scratches (Top Surface)</label>
+          <input type="checkbox" name="surface" id="scratches_top_surface" value="top" />
+          <label for="scratches_top_surface">Scratches (Top Surface)</label>
+
+          <input type="checkbox" name="surface" id="scratches_bottom_surface" value="bottom" />
+          <label for="scratches_bottom_surface">Scratches (Bottom Surface)</label>
+
+          
         </div>
-  
+
+        <div style="margin-top:15px;">
+            <input type="checkbox" name="surface" id="blackOut" value="QR" />
+          <label for="blackOut">QR + Lotcode blacked out</label>
+        </div>
+        
+        
+        <div style="margin-top:15px;">
+          <input type="checkbox" name="surface" id="blacktop"   />
+        <label for="blacktop">Blacktop</label>
+        </div>
+
         <div class="package_type">
           <div></div>
             <h1 class="h1_property">Package type? </h1>
@@ -243,6 +259,8 @@
         </button>
   
         <div style="margin-top:10px">
+
+          <h1 class="h1_property">Decapsulation detail</h1>
           <label for="NumDecap">How many pcs for Decap? </label>
           <input type="text" id="NumDecap" value="" />
 
@@ -265,8 +283,17 @@
           <label for="Marking">What marking was observed? </label>
           <input type="text" id="Marking" value="" />
         </div>
+
+        <div style="margin-top: 10px; margin-left: 5px">
+          <h1 class="h1_property">Xray Summary</h1>
+          Bond wires observed ?
+          <input type="radio" name="xray_status" id="Xray_Yes" value="1">
+          <label for="Xray_Yes">Yes</label>
+          <input type="radio" name="xray_status" id="Xray_No" value="0">
+          <label for="Xray_No">No</label>
+        </div>
   
-        
+
       </div>
   
   

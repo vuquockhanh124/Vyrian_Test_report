@@ -107,10 +107,20 @@ btn.onclick = () => {
   text = ""; // reset
   document.getElementById("text_area").value = text;
 
-  let package_type = document.querySelector(
+
+  let package_type_checked = document.querySelector(
     'input[name="package_type"]:checked'
-  ).value;
+  );
+
+  let package_type="";
+
+  if(package_type_checked==null){alert("Please select the packaging (tube, reel, tray ?")}
+
+  else{
+    package_type=package_type_checked.value;
+  }
   
+  console.log(package_type);
   let partNumber = document.getElementById("PartNumber").value.trim();
   let Quantity = document.getElementById("Quantity").value.trim();
 
@@ -124,7 +134,16 @@ btn.onclick = () => {
 
   let xray_sample = checkXray(Quantity);
 
-  let inorpar= document.querySelector('input[name="Intact_Or_Partial"]:checked').value;
+  let inorpar_checked= document.querySelector('input[name="Intact_Or_Partial"]:checked');
+  let inorpar="";
+  
+  if(inorpar_checked==null){alert("Please select the package type Intact/Partial");}
+  else{
+   inorpar=inorpar_checked.value; }
+  
+
+ 
+  
 
   let passive=document.querySelector('input[name="electrical"]:checked');
 
@@ -181,7 +200,7 @@ btn.onclick = () => {
 
   if (dimension.checked) {
     text += POD_check() + "<br>" + "<br>";
-    document.getElementById("text_area").value += POD_check() + "\r\n" + "\r\n";
+    document.getElementById("text_area").value += POD_check() + surface_problem()+ "\r\n" + "\r\n";
   }
 
   console.log("a is: " + a);
@@ -193,8 +212,14 @@ btn.onclick = () => {
 
   //chemical test
   if (chemical.checked) {
-    text += chem + "<br>" + "<br>";
-    document.getElementById("text_area").value += chem + "\r\n" + "\r\n";
+    let blacktop= document.getElementById("blacktop");
+    
+    if(blacktop.check==0){
+    document.getElementById("text_area").value += chem + "\r\n" + "\r\n";}
+    
+    else if(blacktop.checked==1){
+    document.getElementById("text_area").value += "Remarking/Resurfacing: 3 of 3 sample parts passed remarking. 3 of 3 sample parts fail the resurfacing test; parts exhibit evidence of blacktopping." + "\r\n" + "\r\n";
+    }
   }
 
   if(passive!=null){
@@ -233,6 +258,10 @@ btn.onclick = () => {
   }
   // ddecap
 
+  if(soldering.checked){
+    document.getElementById("text_area").value+= "Solderability testing was performed on 1 random sample using the dip and look method.  The test passed with more than 95% solder coverage." + "\r\n" + "\r\n";
+  }
+
   if (decap.checked) {
     
     document.getElementById("text_area").value +=
@@ -254,7 +283,7 @@ btn.onclick = () => {
 
 
   if (decap.checked) {
-    text += "Decapsulation Summary:" + "<br>" + "<br>";
+  
     document.getElementById("text_area").value +=
       "Decapsulation Summary:" + "\r\n" + "\r\n";
     if (numDecap == 3) {
@@ -263,12 +292,29 @@ btn.onclick = () => {
         "Decapsulation was performed on 3 samples" + "\r\n" + "\r\n";
       decap_summary(3);
     } else if (numDecap == 1) {
-      text += "Decapsulation was performed on 1 sample" + "<br>" + "<br>";
+    
       document.getElementById("text_area").value +=
         "Decapsulation was performed on 1 samples" + "\r\n" + "\r\n";
       decap_summary(1);
     }
   }
+
+
+  if (xray.checked){
+    let xray_status_yes= document.getElementById("Xray_Yes");
+    let xray_status_no= document.getElementById("Xray_No");
+    
+    document.getElementById("text_area").value+= "\r\n"+"\r\n"+"X-RAY Summary: " +"\r\n"+"\r\n";
+
+    if(xray_status_yes.checked){
+    document.getElementById("text_area").value+= "X-ray analysis was performed. No bond pad or wire bond issues observed. No contaminants observed within cavity. No abnormalities observed with die."+ "\r\n"+ "\r\n"  ;}
+  
+    else if(xray_status_no.checked){
+      document.getElementById("text_area").value+= "X-ray analysis was performed. No contaminants observed within cavity. No abnormalities observed with die."+ "\r\n"+ "\r\n"  ;
+    }
+  }
+
+
 
    
 
@@ -367,7 +413,7 @@ function deselectAll() {
 function POD_check() {
   let check = document.getElementById("NoPod");
   if (check.checked == true) {
-    return "Visual Analysis: Dimensions Height, Width, and Diameter were measured for reference since no POD is available. Terminals are free of deformations, corrosion, and oxidation.";
+    return "Visual Analysis: Dimensions Height, Width, and Diameter were measured for reference since no POD is available.";
   } else {
     return "Visual Analysis: Dimensions Height, Width, and Thickness were measured and are within manufacturer's specifications. The parts have the same exterior configuration as the POD.";
   }
@@ -482,4 +528,36 @@ function changeBackground (value){
    
 }
 
-293852
+
+
+function surface_problem(){
+  let scratches_top = document.getElementById("scratches_top_surface");
+  let scratches_bottom= document.getElementById("scratches_bottom_surface");
+  let blackout = document.getElementById("blackOut");
+
+  let final="";
+
+  if(scratches_top.checked && scratches_bottom.checked == 0 ){
+    final=" Minor scratches were observed on the top surface. ";
+  }
+
+  else if(scratches_bottom.checked && scratches_top.checked == 0){
+    final=" Minor scratches were observed on the bottom surface. ";
+  }
+
+  else if(scratches_top.checked  && scratches_bottom.checked){
+   final= " Minor scratches were observed on top and bottom surface. ";
+  }
+
+  if(blackout.checked){
+    final += " Lot code and QR code have been blacked out.";
+  }
+
+  return final;
+
+
+
+
+
+
+}
