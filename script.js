@@ -214,7 +214,7 @@ btn.onclick = () => {
   if (chemical.checked) {
     let blacktop= document.getElementById("blacktop");
     
-    if(blacktop.check==0){
+    if(blacktop.checked==0){
     document.getElementById("text_area").value += chem + "\r\n" + "\r\n";}
     
     else if(blacktop.checked==1){
@@ -527,6 +527,8 @@ function changeBackground (value){
 
    
 }
+
+
 
 
 
