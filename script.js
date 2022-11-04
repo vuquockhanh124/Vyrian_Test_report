@@ -371,7 +371,7 @@ function decap_summary(size) {
       "Sample " +
       (x + 1) +
       ", Die " +
-      (x + 1) +
+      "1" +
       ': Manufacturer logo "' +
       logo +
       '" was observed. "' +
@@ -413,9 +413,9 @@ function deselectAll() {
 function POD_check() {
   let check = document.getElementById("NoPod");
   if (check.checked == true) {
-    return "Visual Analysis: Dimensions Height, Width, and Diameter were measured for reference since no POD is available.";
+    return "Visual Analysis: Dimensions Length, Width, and Thickness were measured for reference since no POD is available.";
   } else {
-    return "Visual Analysis: Dimensions Height, Width, and Thickness were measured and are within manufacturer's specifications. The parts have the same exterior configuration as the POD.";
+    return "Visual Analysis: Dimensions Length, Width, and Thickness were measured and are within manufacturer's specifications. The parts have the same exterior configuration as the POD.";
   }
 }
 
