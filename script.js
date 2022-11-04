@@ -382,7 +382,7 @@ function decap_summary(size) {
     }
     else{
     
-    document.getElementById("text_area").value+= "Sample " + (x + 1) + ", Die " + (x + 1) + ": No abnormalities observed with die."+ "\r\n" + "\r\n";
+    document.getElementById("text_area").value+= "Sample " + (x + 1) + ", Die 1" + ": No abnormalities observed with die."+ "\r\n" + "\r\n";
 
     }
   }
